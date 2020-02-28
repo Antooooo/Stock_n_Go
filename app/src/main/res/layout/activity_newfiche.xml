@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".newfiche">
 
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:text="Désactivées"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="580dp" />
+
     <Button
         android:id="@+id/button5"
         android:layout_width="89dp"
@@ -20,6 +29,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="5dp"
         android:text="Nouvelle fiche"
+        android:textAlignment="center"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button5"
@@ -27,5 +37,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.038" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nom de la liste"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nom de la liste"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nom de la liste"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:text="Activées"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="528dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="131dp"
+        android:layout_height="36dp"
+        android:text="Notifications"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="479dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
