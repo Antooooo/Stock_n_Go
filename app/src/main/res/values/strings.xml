@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Stock_n_Go</string>
     <string name="action_settings">Settings</string>
+    <string name="mes_fiches">Mes fiches</string>
+    <string name="stock_n_go">Stock\'n Go</string>
+    <string name="nouvelle_fiche">Nouvelle fiche</string>
 </resources>
