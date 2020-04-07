@@ -17,7 +17,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button boutonnewfiche;
-
+    private Button boutonmesfiches;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +29,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 opennewfiche();
             }
-
-
             });
+
+
+        boutonmesfiches   = (Button) findViewById(R.id.button2);
+        boutonmesfiches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openmesfiches();
+
+            }
+        });
+
     }
     public void opennewfiche() {
         Intent intent1 = new Intent(this, newfiche.class);
                 startActivity(intent1);
+    }
+
+    public void openmesfiches() {
+        Intent intent2 = new Intent(this, mesfiches.class);
+        startActivity(intent2);
     }
 }
