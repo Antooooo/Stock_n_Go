@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void opennewfiche() {
-        Intent intent1 = new Intent(this, newfiche.class);
+        Intent intent1 = new Intent(this, newfiches.class);
                 startActivity(intent1);
     }
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newfiches">
+
+    <Button
+        android:id="@+id/buttonacc"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-2dp"
+        android:layout_toLeftOf="@id/imageView5"
+
+        android:text="Accueil " />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="72dp"
+        android:layout_height="69dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/compte" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="107dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Types de produits" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nom de la liste" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="210dp"
+        android:layout_height="31dp"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Notifications"
+        android:textColor="#090909"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Activées" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Désactivées" />
+
+
+</RelativeLayout>
+

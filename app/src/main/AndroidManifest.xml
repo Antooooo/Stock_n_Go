@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newfiche"></activity>
+        <activity android:name=".newfiches"></activity>
         <activity android:name=".mesfiches" />
         <activity
             android:name=".MainActivity"
