@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pageinscription">
+    tools:context=".inscription">
+
 
     <Button
         android:id="@+id/retourlog"
@@ -12,16 +13,8 @@
         android:layout_height="70dp"
         android:layout_marginRight="-2dp"
         android:layout_toLeftOf="@id/imageButton"
-
-        android:text="Retour au login " />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="117dp"
-        android:layout_height="90dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="1dp"
-        app:srcCompat="@drawable/compte" />
+    android:layout_centerHorizontal="true"
+        android:text="Retour a la page de connexion " />
 
     <TextView
         android:id="@+id/textView4"
@@ -95,3 +88,4 @@
         android:text="Valider" />
 
 </RelativeLayout>
+

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button boutonnewfiche;
     private Button boutonmesfiches;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

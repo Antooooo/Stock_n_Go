@@ -10,6 +10,8 @@ import android.widget.Button;
 public class mesfiches extends AppCompatActivity {
 
     private Button bouttonaccueil;
+    private Button connexion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,14 @@ public class mesfiches extends AppCompatActivity {
             }
         });
 
+        connexion = (Button) findViewById(R.id.button3);
+        connexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pageconnexion();
+            }
+        });
+
 
 
 
@@ -33,4 +43,10 @@ public class mesfiches extends AppCompatActivity {
         Intent intent2 = new Intent(this, MainActivity.class);
         startActivity(intent2);
     }
+
+    public void pageconnexion() {
+        Intent intent3 = new Intent(this, connexion.class);
+        startActivity(intent3);
+    }
+
     }
