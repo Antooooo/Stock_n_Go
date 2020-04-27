@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class newfiches extends AppCompatActivity {
     private Button buttonaccueil;
+    private String chainenom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,8 @@ public class newfiches extends AppCompatActivity {
             }
         });
 
-
+        EditText nom = (EditText) findViewById(R.id.editText2);
+        String chainenom = nom.getText().toString();
 
 
 
@@ -34,5 +37,8 @@ public class newfiches extends AppCompatActivity {
             startActivity(intent2);
         }
 
+        public String getnom(){
+        return chainenom;
+        }
 
 }
