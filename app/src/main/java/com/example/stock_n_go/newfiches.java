@@ -11,6 +11,8 @@ import android.widget.EditText;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+
 public class newfiches extends AppCompatActivity {
     private Button buttonaccueil;
 
@@ -39,6 +41,11 @@ public class newfiches extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
                 Gson gson= new Gson();
+         String listeproduitGson = prefsStockees.getString("cle_listeproduit", "");
+         if (listeproduitGson.equals("")){
+             listedesproduits = new ArrayList<Produit>();
+
+         }
 
             }
         });
