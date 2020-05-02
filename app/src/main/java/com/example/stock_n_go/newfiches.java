@@ -36,7 +36,7 @@ public class newfiches extends AppCompatActivity {
 
         //enregistrement
 
-        bouttonajouter.setOnClickListener(new View.OnClickListener() {
+       /* bouttonajouter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
@@ -50,7 +50,7 @@ public class newfiches extends AppCompatActivity {
             }
         });
 
-
+*/
 
         }
 
