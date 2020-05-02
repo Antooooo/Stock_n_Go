@@ -45,7 +45,7 @@ public class mesfiches extends AppCompatActivity {
     }
 
     public void pageconnexion() {
-        Intent intent3 = new Intent(this, connexion.class);
+        Intent intent3 = new Intent(this, inscription.class);
         startActivity(intent3);
     }
 
