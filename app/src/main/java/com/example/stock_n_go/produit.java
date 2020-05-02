@@ -15,13 +15,6 @@ public class produit {
         descriptionprod = proddesc;
     }
 
-    // la méthode toString. Classique mais inutilisée ici
-    // employée seulement à des fins de debug
-    @Override
-    public String toString() {
-        return "Nouveau produit : " + nomproduit + "qui est un " + typeproduit + "\n";
+
     }
 
-
-
-}
