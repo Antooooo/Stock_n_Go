@@ -66,7 +66,6 @@ public class newlist extends AppCompatActivity {
                 TextView dateperemp = (TextView) itemView.findViewById(R.id.textView2);
 
                 produit affichageproduit = (produit) ficheproduit.get(itemIndex);
-                //imageView.setImageResource(R.mipmap.ic_launcher);
                 final String produitnom = affichageproduit.nomproduit;
                 final String produittype = affichageproduit.typeproduit;
                 final String peremption = affichageproduit.datedeperemption;
