@@ -33,7 +33,7 @@ public class descriptif_produit extends AppCompatActivity {
 
 //charge
         Intent intent = getIntent();
-        int indiceproduit = intent.getIntExtra("indiceproduitcliqué", 0);
+        int indiceproduit = intent.getIntExtra("ficheproduitclic", 0);
         SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
         Gson gson = new Gson();
         String listeproduitGson = prefsStockees.getString("cle_listeproduit", "");

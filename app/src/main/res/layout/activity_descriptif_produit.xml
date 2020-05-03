@@ -74,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="190dp"
         android:layout_marginTop="160dp"
+        android:editable="false"
         android:text="Texte des vars"
         android:textSize="18sp" />
 
@@ -83,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Edittext1"
         android:layout_marginLeft="190dp"
-
+        android:editable="false"
         android:text="Texte des vars"
         android:textSize="18sp" />
 
@@ -93,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Edittext2"
         android:layout_marginLeft="195dp"
-
+        android:editable="false"
         android:text="Texte des vars"
         android:textSize="18sp" />
 
@@ -104,6 +105,7 @@
         android:layout_below="@id/textView4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:editable="false"
         android:text="Text qui sera mis par les vars"
         android:textAlignment="center" />
 

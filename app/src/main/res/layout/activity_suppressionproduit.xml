@@ -27,9 +27,11 @@
 
     <Button
         android:id="@+id/buttonfiche"
-        android:layout_width="90dp"
+        android:layout_width="285dp"
         android:layout_height="wrap_content"
-        android:text="Mes listes" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Enregistrement et retour aux listes" />
 
     <ImageButton
         android:id="@+id/imageButton"

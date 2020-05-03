@@ -22,7 +22,7 @@ import java.util.Arrays;
 public class newlist extends AppCompatActivity {
 
     private Button suppression;
-
+    private Button boutonacc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +93,9 @@ public class newlist extends AppCompatActivity {
         listeproduit.setAdapter(customBaseAdapter);
 
 
+
+
+
         suppression = (Button) findViewById(R.id.buttonsupp);
         suppression.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,11 +105,25 @@ public class newlist extends AppCompatActivity {
             }
         });
 
+        boutonacc = (Button) findViewById(R.id.buttonacc1);
+        boutonacc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                retouracc();
+            }
+        });
+
     }
 
     public void opensuppression() {
         Intent intent = new Intent(this, suppressionproduit.class);
         startActivity(intent);
     }
+
+    public void retouracc (){
+        Intent intent2 = new Intent(this, MainActivity.class);
+                startActivity(intent2);
+    }
+
 }
 
