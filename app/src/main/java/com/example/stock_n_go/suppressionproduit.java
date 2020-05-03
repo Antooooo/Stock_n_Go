@@ -1,46 +1,39 @@
 package com.example.stock_n_go;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import com.google.gson.Gson;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class newlist extends AppCompatActivity {
+public class suppressionproduit extends AppCompatActivity {
 
-    private Button suppression;
+    private Button boutonfiches;
+    ArrayList<produit> ficheproduit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newlist);
-
-        final ArrayList<produit> ficheproduit;
+        setContentView(R.layout.activity_suppressionproduit);
 
 //charge
         SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
         Gson gson = new Gson();
-        String listeproduitGson = prefsStockees.getString("cle_listeproduit", "");
-        if (listeproduitGson.equals("")) {
-            ficheproduit = new ArrayList<produit>();
-        } else {
-            produit[] tableaufichestempo = gson.fromJson(listeproduitGson, produit[].class);
-            ficheproduit = new ArrayList<produit>(Arrays.asList(tableaufichestempo));
-        }
-
+        final String listeproduitGson = prefsStockees.getString("cle_listeproduit", "");
+        produit[] tableaufichestempo = gson.fromJson(listeproduitGson, produit[].class);
+        // reconstitution d'une arrayList a partir du tableau tableauEtudiantsTemporaire
+        ficheproduit = new ArrayList<produit>(Arrays.asList(tableaufichestempo));
 
         BaseAdapter customBaseAdapter = new BaseAdapter() {
             @Override
@@ -62,7 +55,7 @@ public class newlist extends AppCompatActivity {
             public View getView(final int itemIndex, View itemView, ViewGroup viewGroup) {
 
                 if (itemView == null) {
-                    itemView = LayoutInflater.from(newlist.this).inflate(R.layout.corpsproduit, null);
+                    itemView = LayoutInflater.from(suppressionproduit.this).inflate(R.layout.corpsproduit, null);
                 }
 
                 TextView nomtypeprod = (TextView) itemView.findViewById(R.id.textView1);
@@ -80,10 +73,11 @@ public class newlist extends AppCompatActivity {
 
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(newlist.this, descriptif_produit.class);
-                        intent.putExtra("ficheproduitclic", itemIndex);
-                        startActivity(intent);
+                    public void onClick(View view) {
+                        produit produitciao =  (produit) getItem(itemIndex);
+                        Toast.makeText(suppressionproduit.this, "Le produit a bien été supprimé ", Toast.LENGTH_SHORT).show();
+                        ficheproduit.remove(produitciao);
+                        notifyDataSetChanged();
                     }
                 });
                 return itemView;
@@ -93,20 +87,32 @@ public class newlist extends AppCompatActivity {
         lv_Etudiants.setAdapter(customBaseAdapter);
 
 
-        suppression = (Button) findViewById(R.id.buttonsupp);
-        suppression.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+
+        boutonfiches = (Button) findViewById(R.id.buttonfiche);
+        boutonfiches.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                opensuppression();
+                SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor prefsEditor = prefsStockees.edit();
+                Gson gson = new Gson();
+                String  listeproduitGson = gson.toJson(ficheproduit);
+                prefsEditor.putString("cle_listeproduit", listeproduitGson);
+                prefsEditor.commit();
+                openmesfiches();
 
             }
         });
-
     }
 
-    public void opensuppression() {
-        Intent intent = new Intent(this, suppressionproduit.class);
+    public void openmesfiches() {
+        Intent intent = new Intent(this, mesfiches.class);
         startActivity(intent);
     }
-}
 
+
+}
