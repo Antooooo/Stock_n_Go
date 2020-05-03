@@ -34,7 +34,7 @@ public class newfiches extends AppCompatActivity {
         buttonaccueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                retouracceuil1();
+                retouraccueuil1();
             }
         });
         nomduproduit = findViewById(R.id.editText2);
@@ -70,12 +70,13 @@ public class newfiches extends AppCompatActivity {
 
 
                 Toast.makeText(newfiches.this, "Vous avez bien créé une nouvelle fiche produit", Toast.LENGTH_SHORT).show();
+                retouraccueuil1();
             }
        });
 
     }
 
-        public void retouracceuil1() {
+        public void retouraccueuil1() {
             Intent intent2 = new Intent(this, MainActivity.class);
             startActivity(intent2);
         }

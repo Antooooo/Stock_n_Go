@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".descriptif_produit">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/retourlist"
+        android:layout_width="222dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="-2dp"
+        android:layout_toLeftOf="@id/imageButton"
+        android:text="Retour à la liste " />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="117dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="1dp"
+        app:srcCompat="@drawable/compte" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="175dp"
+        android:text="Nom du produit : "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Type de produit : "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Date de péremption : "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:text="Descriptif du produit"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/Edittext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="160dp"
+        android:text="Texte des vars"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/Edittext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Edittext1"
+        android:layout_marginLeft="190dp"
+
+        android:text="Texte des vars"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/Edittext3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Edittext2"
+        android:layout_marginLeft="195dp"
+
+        android:text="Texte des vars"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/Edittext4"
+        android:layout_width="297dp"
+        android:layout_height="165dp"
+        android:layout_below="@id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Text qui sera mis par les vars"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>
