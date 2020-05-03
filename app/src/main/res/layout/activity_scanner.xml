@@ -24,4 +24,22 @@
         android:layout_marginBottom="25dp"
         android:text="Enregistrer le produit scanné" />
 
+    <TextView
+        android:id="@+id/codeproduit"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="182dp"
+        android:text="Code du produit scanné" />
+
+    <EditText
+        android:id="@+id/edit_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="175dp"
+        android:text="Code scanner" />
+
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.database.CursorJoiner;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -23,13 +24,13 @@ public class scanner extends AppCompatActivity {
     private ZXingScannerView scannerView;
     ArrayList<produitscanner> fichescanner;
     String codeproduit;
+    EditText code_scanner;
 
-/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
-
+/*
         Button enregistrementscanner = findViewById(R.id.scanload);
         enregistrementscanner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +48,8 @@ public class scanner extends AppCompatActivity {
         }
     } */
 
+
+    }
     public void scancode (View view){
         scannerView = new ZXingScannerView(this);
         scannerView.setResultHandler(new ZxingscannerResultHandler());
@@ -70,7 +73,9 @@ public class scanner extends AppCompatActivity {
 
             setContentView(R.layout.activity_scanner);
             scannerView.stopCamera();
-            codeproduit=resultatscan;
+
+            code_scanner= findViewById(R.id.edit_scanner);
+            code_scanner.setText(resultatscan);
         }
 
     }
