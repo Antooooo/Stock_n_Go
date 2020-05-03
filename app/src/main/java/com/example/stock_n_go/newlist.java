@@ -2,6 +2,7 @@ package com.example.stock_n_go;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Layout;
@@ -60,8 +61,8 @@ public class newlist extends AppCompatActivity {
                     itemView = LayoutInflater.from(ficheproduit.this).inflate(R.layout.corpsproduit, null);
                 }
 
-                TextView nomtypeprod  = (TextView) itemView.findViewById(R.id.textView1);
-                TextView dateperemp  = (TextView) itemView.findViewById(R.id.textView2);
+                TextView nomtypeprod = (TextView) itemView.findViewById(R.id.textView1);
+                TextView dateperemp = (TextView) itemView.findViewById(R.id.textView2);
 
                 produit affichageproduit = (produit) ficheproduit.get(itemIndex);
                 //imageView.setImageResource(R.mipmap.ic_launcher);
@@ -71,20 +72,19 @@ public class newlist extends AppCompatActivity {
                 final String descproduit = affichageproduit.descriptionprod;
 
                 nomtypeprod.setText(produitnom + "  " + produittype);
-                dateperemp.setText("Date de péremmtion : "+ peremption);
+                dateperemp.setText("Date de péremmtion : " + peremption);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(newlist.this, descriptif_produit.class);
+                        intent.putExtra("ficheproduitclic", itemIndex);
+                        startActivity(intent);
+                    }
+                });
+                return itemView;
+            }
+        }
     }
 }
