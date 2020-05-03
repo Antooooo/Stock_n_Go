@@ -56,7 +56,7 @@ public class newlist extends AppCompatActivity {
             public View getView(final int itemIndex, View itemView, ViewGroup viewGroup) {
 
                 if (itemView == null) {
-                    itemView = LayoutInflater.from(ficheproduit.this).inflate(R.layout.);
+                    itemView = LayoutInflater.from(ficheproduit.this).inflate(R.layout.corpsproduit, null);
                 }
 
 
