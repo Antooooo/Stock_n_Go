@@ -11,6 +11,7 @@ public class mesfiches extends AppCompatActivity {
 
     private Button bouttonaccueil;
     private Button connexion;
+    private Button bouttonfiche;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,14 @@ public class mesfiches extends AppCompatActivity {
             }
         });
 
+        bouttonfiche = (Button) findViewById(R.id.button4);
+        bouttonfiche.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gofiche1();
+            }
+        });
+
 
 
 
@@ -47,6 +56,11 @@ public class mesfiches extends AppCompatActivity {
     public void pageconnexion() {
         Intent intent3 = new Intent(this, inscription.class);
         startActivity(intent3);
+    }
+
+    public void gofiche1() {
+        Intent intent4 = new Intent(this, newlist.class);
+        startActivity(intent4);
     }
 
     }
