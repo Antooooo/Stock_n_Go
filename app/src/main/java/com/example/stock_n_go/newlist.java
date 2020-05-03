@@ -89,8 +89,8 @@ public class newlist extends AppCompatActivity {
                 return itemView;
             }
         };
-        ListView lv_Etudiants = (ListView) findViewById(R.id.listproduit);
-        lv_Etudiants.setAdapter(customBaseAdapter);
+        ListView listeproduit = (ListView) findViewById(R.id.listproduit);
+        listeproduit.setAdapter(customBaseAdapter);
 
 
         suppression = (Button) findViewById(R.id.buttonsupp);

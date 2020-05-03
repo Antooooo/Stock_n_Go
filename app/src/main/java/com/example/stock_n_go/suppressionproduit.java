@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -30,9 +29,8 @@ public class suppressionproduit extends AppCompatActivity {
 //charge
         SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
         Gson gson = new Gson();
-        final String listeproduitGson = prefsStockees.getString("cle_listeproduit", "");
+        String listeproduitGson = prefsStockees.getString("cle_listeproduit", "");
         produit[] tableaufichestempo = gson.fromJson(listeproduitGson, produit[].class);
-        // reconstitution d'une arrayList a partir du tableau tableauEtudiantsTemporaire
         ficheproduit = new ArrayList<produit>(Arrays.asList(tableaufichestempo));
 
         BaseAdapter customBaseAdapter = new BaseAdapter() {
@@ -83,11 +81,8 @@ public class suppressionproduit extends AppCompatActivity {
                 return itemView;
             }
         };
-        ListView lv_Etudiants = (ListView) findViewById(R.id.listproduit);
-        lv_Etudiants.setAdapter(customBaseAdapter);
-
-
-
+        ListView listeproduit = (ListView) findViewById(R.id.listviewsupp);
+        listeproduit.setAdapter(customBaseAdapter);
 
 
 
