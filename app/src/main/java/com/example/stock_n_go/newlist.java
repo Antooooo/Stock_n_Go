@@ -73,7 +73,7 @@ public class newlist extends AppCompatActivity {
                 final String descproduit = affichageproduit.descriptionprod;
 
                 nomtypeprod.setText(produitnom + "  " + produittype);
-                dateperemp.setText("Date de péremmtion : " + peremption);
+                dateperemp.setText("Date de péremption : " + peremption);
 
 
                 itemView.setOnClickListener(new View.OnClickListener() {
