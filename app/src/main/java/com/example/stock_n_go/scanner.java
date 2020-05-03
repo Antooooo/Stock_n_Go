@@ -26,6 +26,7 @@ public class scanner extends AppCompatActivity {
     String codeproduit;
     EditText code_scanner;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
