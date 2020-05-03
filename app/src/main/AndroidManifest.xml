@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".corpsproduit"></activity>
+        <activity android:name=".corpsproduit" />
         <activity android:name=".newlist" />
         <activity android:name=".inscription" />
         <activity android:name=".connexion" />

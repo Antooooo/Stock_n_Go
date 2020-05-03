@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
@@ -22,7 +23,7 @@ public class newlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newlist);
 
-        ArrayList<produit> ficheproduit;
+        final ArrayList<produit> ficheproduit;
 
 //charge
         SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
@@ -59,6 +60,18 @@ public class newlist extends AppCompatActivity {
                     itemView = LayoutInflater.from(ficheproduit.this).inflate(R.layout.corpsproduit, null);
                 }
 
+                TextView nomtypeprod  = (TextView) itemView.findViewById(R.id.textView1);
+                TextView dateperemp  = (TextView) itemView.findViewById(R.id.textView2);
+
+                produit affichageproduit = (produit) ficheproduit.get(itemIndex);
+                //imageView.setImageResource(R.mipmap.ic_launcher);
+                final String produitnom = affichageproduit.nomproduit;
+                final String produittype = affichageproduit.typeproduit;
+                final String peremption = affichageproduit.datedeperemption;
+                final String descproduit = affichageproduit.descriptionprod;
+
+                nomtypeprod.setText(produitnom + "  " + produittype);
+                dateperemp.setText("Date de péremmtion : "+ peremption);
 
 
 
