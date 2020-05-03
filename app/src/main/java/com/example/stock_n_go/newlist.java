@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -58,7 +59,7 @@ public class newlist extends AppCompatActivity {
             public View getView(final int itemIndex, View itemView, ViewGroup viewGroup) {
 
                 if (itemView == null) {
-                    itemView = LayoutInflater.from(ficheproduit.this).inflate(R.layout.corpsproduit, null);
+                    itemView = LayoutInflater.from(newlist.this).inflate(R.layout.corpsproduit, null);
                 }
 
                 TextView nomtypeprod = (TextView) itemView.findViewById(R.id.textView1);
@@ -85,6 +86,8 @@ public class newlist extends AppCompatActivity {
                 });
                 return itemView;
             }
-        }
+        };
+        ListView lv_Etudiants  = (ListView)findViewById(R.id.listproduit);
+        lv_Etudiants.setAdapter(customBaseAdapter);
     }
 }
