@@ -11,7 +11,9 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList <nouvelle_fiche> nomnewlist;
+
+
+    //initialisation des boutons pour aller aux pages voulus
     private Button boutonnewfiche;
     private Button boutonmesfiches;
 
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //onclick listener pour aller a l'activity nouvelle fiche une fois le bouton correspondant cliqué (on utilise la méthode ci dessous)
         boutonnewfiche = (Button) findViewById(R.id.button3);
         boutonnewfiche.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             }
             });
 
-
+        //meme chose que précedemment mais pour voir les listes
         boutonmesfiches   = (Button) findViewById(R.id.button2);
         boutonmesfiches.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,11 +43,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    //méthode pour aller vers l'activity  nouvelle fiche avec l'intent
     public void opennewfiche() {
         Intent intent1 = new Intent(this, nouvelle_fiche.class);
                 startActivity(intent1);
     }
 
+    //méthode pour aller vers l'activity  mes fiche avec l'intent
     public void openmesfiches() {
         Intent intent2 = new Intent(this, mesfiches.class);
         startActivity(intent2);

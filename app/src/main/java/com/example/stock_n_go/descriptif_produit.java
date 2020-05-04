@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class descriptif_produit extends AppCompatActivity {
  private Button retourlist;
 
+ //initiatlisation des 4 editText des données nécessaires
     EditText nom;
     EditText type;
     EditText date;
     EditText descrip;
-    ArrayList<produit> ficheproduit;
 
 
     @Override
@@ -29,7 +29,7 @@ public class descriptif_produit extends AppCompatActivity {
         setContentView(R.layout.activity_descriptif_produit);
 
 
-//charge
+//chargement des données stockées dans le Shared preference et mise dans un tableau fiche produit basé sur la structure crée dans la classe produit
         Intent intent = getIntent();
         int indiceproduit = intent.getIntExtra("ficheproduitclic", 0);
         SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
@@ -39,12 +39,13 @@ public class descriptif_produit extends AppCompatActivity {
         produit ficheproduit = tableaufichestempo[indiceproduit];
 
 
-
+//on récupère les editstext voulus pour les remplir
         nom =  findViewById(R.id.Edittext1);
         type =  findViewById(R.id.Edittext2);
         date =  findViewById(R.id.Edittext3);
         descrip = findViewById(R.id.Edittext4);
 
+        // remplissage des Editiext avec les données voulus mais qui ne sont pas editables manuellements (android:editable="false" dans le layout)
         nom.setText(ficheproduit.nomproduit);
         type.setText(ficheproduit.typeproduit);
         date.setText(ficheproduit.datedeperemption);
@@ -53,7 +54,7 @@ public class descriptif_produit extends AppCompatActivity {
 
 
 
-
+        //onclick listener pour lorsqu'on appuie sur le bouton de retour a la liste avec la méthode associée
         retourlist = (Button) findViewById(R.id.retourlist);
         retourlist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,11 +66,13 @@ public class descriptif_produit extends AppCompatActivity {
 
     }
 
+    //méthode pour retournée à la page de la liste
     public void retournerliste() {
         Intent intent = new Intent(this, voirliste.class);
         startActivity(intent);
     }
 
+    //méthode pour accéder a la page de login (associée à l'image bouton)
     public void pagelogin(View view){
         Intent intent3 = new Intent(this, connexion.class);
         startActivity(intent3);

@@ -12,3 +12,5 @@ public class corpsproduit extends AppCompatActivity {
         setContentView(R.layout.corpsproduit);
     }
 }
+
+//partie non utilisée mais créee lors de la création pour la layout du corps des items de la liste

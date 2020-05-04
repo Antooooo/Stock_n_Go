@@ -16,9 +16,10 @@ public class connexion extends AppCompatActivity {
 
 
     }
+//méthode pour aller à la page d'inscription via le bouton
 
     public void pageincript(View view){
-        Intent intent1 = new Intent(this, inscription.class);
+        Intent intent1 = new Intent(this, inscription.class); //utilisation de l'intent pour naviguer entre les activity
         startActivity(intent1);
     }
 

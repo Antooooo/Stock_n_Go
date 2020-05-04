@@ -11,3 +11,6 @@ public class produitscanner {
 
     }
 }
+
+//classe similaire a la classe produit mais non utiliser car une autre salution a été trouvée pour le scanner
+//mais sera utilise lors de la mise en place des bases de données

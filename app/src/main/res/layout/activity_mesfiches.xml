@@ -38,14 +38,6 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Test inscription" />
-
-    <Button
         android:id="@+id/button4"
         android:layout_width="247dp"
         android:layout_height="wrap_content"
