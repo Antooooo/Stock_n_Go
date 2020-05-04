@@ -64,7 +64,7 @@ public class newfiches extends AppCompatActivity {
                         nomduproduit.setText("Magret de canard ");
                         typedeproduit.setText("Comestible frais");
                         datedeperemptionduproduit.setText("17/08/2020");
-                        descriptionduproduit.setText("Magret de Canard délicatement préparé par notre ami Tanguy dans sa maison à Hoche, il nous a bien régalé");
+                        descriptionduproduit.setText("Magret de Canard délicatement préparé par notre ami Tanguy dans sa maison à Auch, il nous a bien régalé");
                         break;
 
                     case "87512345":

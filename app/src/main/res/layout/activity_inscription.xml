@@ -13,8 +13,8 @@
         android:layout_width="222dp"
         android:layout_height="70dp"
         android:layout_marginRight="-2dp"
-        android:layout_toLeftOf="@id/imageButton"
-    android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="pagelogin"
         android:text="Retour a la page de connexion " />
 
     <TextView
@@ -86,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:onClick="validation"
         android:text="Valider" />
 
 </RelativeLayout>
