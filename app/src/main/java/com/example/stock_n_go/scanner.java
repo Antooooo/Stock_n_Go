@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.zxing.Result;
 import java.util.ArrayList;
@@ -65,14 +66,14 @@ public class scanner extends AppCompatActivity {
             setContentView(R.layout.activity_scanner);
             scannerView.stopCamera();
 
-            EditText code_scanner = findViewById(R.id.edit_scanner);
+            TextView code_scanner = findViewById(R.id.edit_scanner);
             code_scanner.setText(resultatscan);
         }
 
     }
 
     public void enregistrevalduscan (View view){
-        EditText code_scanner = (EditText) findViewById(R.id.edit_scanner);
+        TextView code_scanner = (TextView) findViewById(R.id.edit_scanner);
         String valeurduscanner = code_scanner.getText().toString();
         Intent intent = new Intent(this, newfiches.class);
 
