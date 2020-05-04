@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -73,6 +74,17 @@ public class newfiches extends AppCompatActivity {
                 retouraccueuil1();
             }
        });
+
+
+        Intent intent = getIntent();
+        if (intent!=null){
+            String valeurscanner="";
+            if(intent.hasExtra("Valeurducode")){
+                valeurscanner=intent.getStringExtra("Valeurducode");
+            }
+            TextView test = (TextView) findViewById(R.id.testscan);
+            test.setText(valeurscanner);
+        }
 
     }
 

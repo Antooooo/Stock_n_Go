@@ -2,6 +2,7 @@ package com.example.stock_n_go;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.CursorJoiner;
 import android.os.Bundle;
@@ -79,8 +80,16 @@ public class scanner extends AppCompatActivity {
             code_scanner.setText(resultatscan);
         }
 
+
     }
 
+    public void enregistrevalduscan (View view){
+        EditText valduscan=(EditText) findViewById(R.id.edit_scanner);
+        String valeurduscanner = valduscan.getText().toString();
+        Intent intent = new Intent(this,newfiches.class);
+        intent.putExtra("Valeurducode",valeurduscanner);
 
+        startActivity(intent);
+    }
 
 }

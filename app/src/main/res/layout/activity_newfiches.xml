@@ -92,6 +92,13 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/testscan"
+        android:layout_width="89dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:text="TextView" />
+
 
 </RelativeLayout>
 
