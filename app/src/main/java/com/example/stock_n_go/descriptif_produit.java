@@ -30,6 +30,8 @@ public class descriptif_produit extends AppCompatActivity {
 
 
 //chargement des données stockées dans le Shared preference et mise dans un tableau fiche produit basé sur la structure crée dans la classe produit
+        //comme précédemment on utilise le sharedpréference avec la bonne clé et on met les valeur récupérée
+        //dans une arraylist de produit
         Intent intent = getIntent();
         int indiceproduit = intent.getIntExtra("ficheproduitclic", 0);
         SharedPreferences prefsStockees = getSharedPreferences("mesPrefs", MODE_PRIVATE);
@@ -45,7 +47,8 @@ public class descriptif_produit extends AppCompatActivity {
         date =  findViewById(R.id.Edittext3);
         descrip = findViewById(R.id.Edittext4);
 
-        // remplissage des Editiext avec les données voulus mais qui ne sont pas editables manuellements (android:editable="false" dans le layout)
+        // remplissage des Editiext avec les données récupérées plus haut
+        // Les edittext ne sont pas editables manuellements (android:editable="false" dans le layout)
         nom.setText(ficheproduit.nomproduit);
         type.setText(ficheproduit.typeproduit);
         date.setText(ficheproduit.datedeperemption);

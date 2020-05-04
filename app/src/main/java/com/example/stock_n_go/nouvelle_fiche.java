@@ -85,7 +85,7 @@ public class nouvelle_fiche extends AppCompatActivity {
             }
         }
 
-      //enregistrement des varaibles rentrée avec l'association du bouton enregistrement
+      //enregistrement des variables rentrée avec l'association du bouton enregistrement
 
         Button bouttonenregistrement = findViewById(R.id.button4);
         bouttonenregistrement.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +101,9 @@ public class nouvelle_fiche extends AppCompatActivity {
          if (listeproduitGson.equals("")){
              ficheproduit = new ArrayList<produit>(); }
              else {
+                 //tableau temporaire ayant les données en Json pour basculer les activités dans la arraylist
              produit[] tableaufichestempo = gson.fromJson(listeproduitGson, produit[].class);
+             //arraylist finale de type produit avec les données chargées
              ficheproduit = new ArrayList<produit>(Arrays.asList(tableaufichestempo));
          }
 
