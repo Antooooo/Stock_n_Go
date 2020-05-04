@@ -134,6 +134,10 @@ public class newfiches extends AppCompatActivity {
             startActivity(intent2);
         }
 
+    public void pagelogin(View view){
+        Intent intent3 = new Intent(this, connexion.class);
+        startActivity(intent3);
+    }
 
 
 }

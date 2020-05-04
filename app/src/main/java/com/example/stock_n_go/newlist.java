@@ -116,13 +116,6 @@ public class newlist extends AppCompatActivity {
             }
         });
 
-        boutonconnexion=(ImageButton) findViewById(R.id.bouttonlogin);
-        boutonconnexion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pagelogin();
-            }
-        });
 
     }
 
@@ -136,7 +129,7 @@ public class newlist extends AppCompatActivity {
                 startActivity(intent2);
     }
 
-    public void pagelogin(){
+    public void pagelogin(View view){
         Intent intent3 = new Intent(this, connexion.class);
         startActivity(intent3);
     }

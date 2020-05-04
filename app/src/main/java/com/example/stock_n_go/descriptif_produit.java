@@ -71,4 +71,9 @@ public class descriptif_produit extends AppCompatActivity {
         Intent intent = new Intent(this, newlist.class);
         startActivity(intent);
     }
+
+    public void pagelogin(View view){
+        Intent intent3 = new Intent(this, connexion.class);
+        startActivity(intent3);
+    }
 }
