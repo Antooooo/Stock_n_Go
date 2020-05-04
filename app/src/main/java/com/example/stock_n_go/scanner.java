@@ -1,23 +1,13 @@
 package com.example.stock_n_go;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.CursorJoiner;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.gson.Gson;
 import com.google.zxing.Result;
-import com.google.zxing.client.result.ResultParser;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class scanner extends AppCompatActivity {
@@ -26,6 +16,7 @@ public class scanner extends AppCompatActivity {
     ArrayList<produitscanner> fichescanner;
     String codeproduit;
     EditText code_scanner;
+    private Button retour;
 
 
     @Override
@@ -49,10 +40,17 @@ public class scanner extends AppCompatActivity {
         });
         }
     } */
-
+        retour = (Button) findViewById(R.id.button8);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openmesfiches();
+            }
+        });
 
     }
-    public void scancode (View view){
+
+    public void scancode(View view) {
         scannerView = new ZXingScannerView(this);
         scannerView.setResultHandler(new ZxingscannerResultHandler());
         setContentView(scannerView);
@@ -60,36 +58,32 @@ public class scanner extends AppCompatActivity {
 
     }
 
-    public void onPause(){
+    public void onPause() {
         super.onPause();
         scannerView.stopCamera();
     }
 
-    class ZxingscannerResultHandler implements ZXingScannerView.ResultHandler
-    {
+    class ZxingscannerResultHandler implements ZXingScannerView.ResultHandler {
 
-        public void handleResult (Result result){
+        public void handleResult(Result result) {
 
-        String resultatscan = result.getText();
-        Toast.makeText(scanner.this, resultatscan , Toast.LENGTH_SHORT).show();
+            String resultatscan = result.getText();
+            Toast.makeText(scanner.this, resultatscan, Toast.LENGTH_SHORT).show();
 
             setContentView(R.layout.activity_scanner);
             scannerView.stopCamera();
 
-            code_scanner= findViewById(R.id.edit_scanner);
+            code_scanner = findViewById(R.id.edit_scanner);
             code_scanner.setText(resultatscan);
         }
 
 
     }
 
-    public void enregistrevalduscan (View view){
-        EditText valduscan=(EditText) findViewById(R.id.edit_scanner);
-        String valeurduscanner = valduscan.getText().toString();
-        Intent intent = new Intent(this,newfiches.class);
-        intent.putExtra("Valeurducode",valeurduscanner);
-
-        startActivity(intent);
+    public void openmesfiches() {
+        Intent intent2 = new Intent(this, newfiches.class);
+        startActivity(intent2);
     }
+
 
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFFFFF"
+    android:background="#4CAF50"
     tools:context=".mesfiches">
 
     <Button
@@ -30,7 +30,7 @@
         android:layout_height="42dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="136dp"
-        android:background="#0CDD14"
+        android:background="#009688"
         android:text="Mes Listes"
         android:textAlignment="center"
         android:textColor="#0B0B0B"

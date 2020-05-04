@@ -75,7 +75,7 @@ public class newfiches extends AppCompatActivity {
             }
        });
 
-
+/*
         Intent intent = getIntent();
         if (intent!=null){
             String valeurscanner="";
@@ -85,7 +85,7 @@ public class newfiches extends AppCompatActivity {
             TextView test = (TextView) findViewById(R.id.testscan);
             test.setText(valeurscanner);
         }
-
+*/
     }
 
         public void retouraccueuil1() {

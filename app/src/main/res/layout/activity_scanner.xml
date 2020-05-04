@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     tools:context=".scanner">
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/lancement"
         android:layout_width="165dp"
         android:layout_height="92dp"
         android:layout_centerInParent="true"
@@ -22,7 +23,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
-        android:onClick="enregistrevalduscan"
         android:text="Enregistrer le produit scanné" />
 
     <TextView
@@ -42,5 +42,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="175dp"
         android:text="Code scanner" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </RelativeLayout>
