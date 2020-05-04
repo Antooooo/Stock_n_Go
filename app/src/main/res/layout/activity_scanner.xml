@@ -33,16 +33,16 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="186dp"
         android:text="Code du produit scanné"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/edit_scanner"
-        android:layout_width="161dp"
-        android:layout_height="30dp"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="176dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="183dp"
         android:text="Code scanner"
         android:textSize="18sp" />
 

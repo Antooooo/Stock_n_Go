@@ -31,15 +31,6 @@ public class newfiches extends AppCompatActivity {
 
 
 
-        Intent intent = getIntent();
-        if (intent!=null){
-            String valeurscanner="";
-            if(intent.hasExtra("Valeurducode")){
-                valeurscanner=intent.getStringExtra("Valeurducode");
-            }
-            TextView textView = (TextView) findViewById(R.id.testscan);
-            textView.setText(valeurscanner);
-        }
 
 
         Button bouttonenregistrement = findViewById(R.id.button4);
@@ -54,6 +45,43 @@ public class newfiches extends AppCompatActivity {
         typedeproduit = findViewById(R.id.editText);
         datedeperemptionduproduit = findViewById(R.id.editText3);
         descriptionduproduit = findViewById(R.id.editText4);
+
+        Intent intent = getIntent();
+        if (intent!=null){
+            String valeurscanner="";
+            if(intent.hasExtra("Valeurducode")){
+                valeurscanner=intent.getStringExtra("Valeurducode");
+
+                //TextView textView = (TextView) findViewById(R.id.testscan);
+                //textView.setText(valeurscanner);
+
+                switch (valeurscanner) {
+                    case "123456789":
+                        nomduproduit.setText("Vinaigre blanc");
+                        typedeproduit.setText("Produit ménagé");
+                        datedeperemptionduproduit.setText("21/01/2022");
+                        descriptionduproduit.setText("Vinaigre blanc de qualité supérieur acheté a l'intermarché et provenant de Marseille");
+                        break;
+
+                    case "52486975":
+                        nomduproduit.setText("Magret de canard ");
+                        typedeproduit.setText("Comestible frai");
+                        datedeperemptionduproduit.setText("17/08/2020");
+                        descriptionduproduit.setText("Magret de Canard délicatement préparé par notre ami Tanguy dans sa maison à Hoche, il nous a bien régalé");
+                        break;
+
+                    case "87512345":
+                        nomduproduit.setText("Chocapik");
+                        typedeproduit.setText("Comestible sec");
+                        datedeperemptionduproduit.setText("08/03/2021");
+                        descriptionduproduit.setText("Pour un petit déjeuner plein d'énergie et une journée bien réussie les Chocapik vont vous accompagnés sur cette longue journée");
+                        break;
+
+
+
+                }
+            }
+        }
 
       //enregistrement
 
