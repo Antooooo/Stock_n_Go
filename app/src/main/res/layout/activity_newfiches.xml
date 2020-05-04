@@ -93,12 +93,14 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/testscan"
-        android:layout_width="89dp"
-        android:layout_height="38dp"
+    <Button
+        android:id="@+id/bouttonscanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="115dp"
+        android:text="Scanner un produit" />
 
 
 </RelativeLayout>

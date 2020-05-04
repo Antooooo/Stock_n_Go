@@ -23,13 +23,12 @@ public class newfiches extends AppCompatActivity {
     EditText typedeproduit;
     EditText datedeperemptionduproduit;
     EditText descriptionduproduit;
+    private Button bouttonscanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newfiches);
-
-
 
 
 
@@ -52,8 +51,6 @@ public class newfiches extends AppCompatActivity {
             if(intent.hasExtra("Valeurducode")){
                 valeurscanner=intent.getStringExtra("Valeurducode");
 
-                //TextView textView = (TextView) findViewById(R.id.testscan);
-                //textView.setText(valeurscanner);
 
                 switch (valeurscanner) {
                     case "123456789":
@@ -115,7 +112,21 @@ public class newfiches extends AppCompatActivity {
             }
        });
 
+        bouttonscanner =(Button) findViewById(R.id.bouttonscanner);
+        bouttonscanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scan();
+            }
+        });
 
+    }
+
+
+
+    public void scan() {
+        Intent intent5 = new Intent(this, scanner.class);
+        startActivity(intent5);
     }
 
         public void retouraccueuil1() {

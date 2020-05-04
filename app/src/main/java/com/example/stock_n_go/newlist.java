@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,6 +24,8 @@ public class newlist extends AppCompatActivity {
 
     private Button suppression;
     private Button boutonacc;
+    private ImageButton boutonconnexion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +116,14 @@ public class newlist extends AppCompatActivity {
             }
         });
 
+        boutonconnexion=(ImageButton) findViewById(R.id.bouttonlogin);
+        boutonconnexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pagelogin();
+            }
+        });
+
     }
 
     public void opensuppression() {
@@ -123,6 +134,11 @@ public class newlist extends AppCompatActivity {
     public void retouracc (){
         Intent intent2 = new Intent(this, MainActivity.class);
                 startActivity(intent2);
+    }
+
+    public void pagelogin(){
+        Intent intent3 = new Intent(this, connexion.class);
+        startActivity(intent3);
     }
 
 }

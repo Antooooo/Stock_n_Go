@@ -12,12 +12,12 @@
         android:layout_width="222dp"
         android:layout_height="70dp"
         android:layout_marginRight="-2dp"
-        android:layout_toLeftOf="@id/imageButton"
+        android:layout_toLeftOf="@id/bouttonlogin"
 
         android:text="Accueil " />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/bouttonlogin"
         android:layout_width="117dp"
         android:layout_height="90dp"
         android:layout_alignParentRight="true"
@@ -78,14 +78,6 @@
         android:layout_below="@id/button5"
         android:layout_marginTop="10dp"
         android:text="Liste produits du BDS" />
-
-    <Button
-        android:id="@+id/buttonscanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-
-        android:text="test scan" />
 
 
 </RelativeLayout>

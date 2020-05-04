@@ -45,13 +45,6 @@ public class mesfiches extends AppCompatActivity {
             }
         });
 
-        scanner =(Button) findViewById(R.id.buttonscanner);
-        scanner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                scan();
-            }
-        });
 
 
     }
@@ -68,11 +61,6 @@ public class mesfiches extends AppCompatActivity {
     public void gofiche1() {
         Intent intent4 = new Intent(this, newlist.class);
         startActivity(intent4);
-    }
-
-    public void scan() {
-        Intent intent5 = new Intent(this, scanner.class);
-        startActivity(intent5);
     }
 
     }
