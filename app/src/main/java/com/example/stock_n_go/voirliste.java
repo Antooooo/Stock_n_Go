@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +19,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class newlist extends AppCompatActivity {
+public class voirliste extends AppCompatActivity {
 
     private Button suppression;
     private Button boutonacc;
@@ -29,7 +28,7 @@ public class newlist extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newlist);
+        setContentView(R.layout.voirliste);
 
         final ArrayList<produit> ficheproduit;
 
@@ -65,7 +64,7 @@ public class newlist extends AppCompatActivity {
             public View getView(final int itemIndex, View itemView, ViewGroup viewGroup) {
 
                 if (itemView == null) {
-                    itemView = LayoutInflater.from(newlist.this).inflate(R.layout.corpsproduit, null);
+                    itemView = LayoutInflater.from(voirliste.this).inflate(R.layout.corpsproduit, null);
                 }
 
                 TextView nomtypeprod = (TextView) itemView.findViewById(R.id.textView1);
@@ -84,7 +83,7 @@ public class newlist extends AppCompatActivity {
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(newlist.this, descriptif_produit.class);
+                        Intent intent = new Intent(voirliste.this, descriptif_produit.class);
                         intent.putExtra("ficheproduitclic", itemIndex);
                         startActivity(intent);
                     }

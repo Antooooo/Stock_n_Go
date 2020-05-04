@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.google.gson.Gson;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import java.util.Arrays;
 
 
 
-public class newfiches extends AppCompatActivity {
+public class nouvelle_fiche extends AppCompatActivity {
     private Button buttonaccueil;
     ArrayList<produit> ficheproduit;
     EditText nomduproduit;
@@ -28,7 +27,7 @@ public class newfiches extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newfiches);
+        setContentView(R.layout.activity_nouvelle_fiche);
 
 
 
@@ -107,7 +106,7 @@ public class newfiches extends AppCompatActivity {
                 prefsEditor.commit();
 
 
-                Toast.makeText(newfiches.this, "Vous avez bien créé une nouvelle fiche produit", Toast.LENGTH_SHORT).show();
+                Toast.makeText(nouvelle_fiche.this, "Vous avez bien créé une nouvelle fiche produit", Toast.LENGTH_SHORT).show();
                 retouraccueuil1();
             }
        });

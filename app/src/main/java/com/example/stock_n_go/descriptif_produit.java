@@ -8,12 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class descriptif_produit extends AppCompatActivity {
  private Button retourlist;
@@ -68,7 +66,7 @@ public class descriptif_produit extends AppCompatActivity {
     }
 
     public void retournerliste() {
-        Intent intent = new Intent(this, newlist.class);
+        Intent intent = new Intent(this, voirliste.class);
         startActivity(intent);
     }
 

@@ -59,7 +59,7 @@ public class mesfiches extends AppCompatActivity {
     }
 
     public void gofiche1() {
-        Intent intent4 = new Intent(this, newlist.class);
+        Intent intent4 = new Intent(this, voirliste.class);
         startActivity(intent4);
     }
     public void pagelogin(View view){

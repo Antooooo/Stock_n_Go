@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.zxing.Result;
@@ -75,7 +74,7 @@ public class scanner extends AppCompatActivity {
     public void enregistrevalduscan (View view){
         TextView code_scanner = (TextView) findViewById(R.id.edit_scanner);
         String valeurduscanner = code_scanner.getText().toString();
-        Intent intent = new Intent(this, newfiches.class);
+        Intent intent = new Intent(this, nouvelle_fiche.class);
 
         intent.putExtra("Valeurducode",valeurduscanner);
 

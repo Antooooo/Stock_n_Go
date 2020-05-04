@@ -14,13 +14,13 @@
         <activity android:name=".suppressionproduit" />
         <activity android:name=".descriptif_produit" />
         <activity android:name=".corpsproduit" />
-        <activity android:name=".newlist" />
+        <activity android:name=".voirliste" />
         <activity android:name=".inscription" />
         <activity android:name=".connexion" />
         <activity
             android:name=".ui.login.pageLogin"
             android:label="@string/title_activity_page_login" />
-        <activity android:name=".newfiches" />
+        <activity android:name=".nouvelle_fiche" />
         <activity android:name=".mesfiches" />
         <activity
             android:name=".MainActivity"
