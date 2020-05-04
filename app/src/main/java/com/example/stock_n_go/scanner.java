@@ -15,7 +15,6 @@ public class scanner extends AppCompatActivity {
     private ZXingScannerView scannerView;
     ArrayList<produitscanner> fichescanner;
     String codeproduit;
-    EditText code_scanner;
     private Button retour;
 
 
@@ -40,13 +39,6 @@ public class scanner extends AppCompatActivity {
         });
         }
     } */
-        retour = (Button) findViewById(R.id.button8);
-        retour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openmesfiches();
-            }
-        });
 
     }
 
@@ -73,17 +65,22 @@ public class scanner extends AppCompatActivity {
             setContentView(R.layout.activity_scanner);
             scannerView.stopCamera();
 
-            code_scanner = findViewById(R.id.edit_scanner);
+            EditText code_scanner = findViewById(R.id.edit_scanner);
             code_scanner.setText(resultatscan);
         }
 
-
     }
 
-    public void openmesfiches() {
-        Intent intent2 = new Intent(this, newfiches.class);
-        startActivity(intent2);
+    public void enregistrevalduscan (View view){
+        EditText code_scanner = (EditText) findViewById(R.id.edit_scanner);
+        String valeurduscanner = code_scanner.getText().toString();
+        Intent intent = new Intent(this, newfiches.class);
+
+        intent.putExtra("Valeurducode",valeurduscanner);
+
+        startActivity(intent);
     }
+
 
 
 }

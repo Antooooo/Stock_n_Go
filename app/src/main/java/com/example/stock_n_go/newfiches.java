@@ -30,6 +30,18 @@ public class newfiches extends AppCompatActivity {
         setContentView(R.layout.activity_newfiches);
 
 
+
+        Intent intent = getIntent();
+        if (intent!=null){
+            String valeurscanner="";
+            if(intent.hasExtra("Valeurducode")){
+                valeurscanner=intent.getStringExtra("Valeurducode");
+            }
+            TextView textView = (TextView) findViewById(R.id.testscan);
+            textView.setText(valeurscanner);
+        }
+
+
         Button bouttonenregistrement = findViewById(R.id.button4);
         buttonaccueil = (Button) findViewById(R.id.buttonacc1);
         buttonaccueil.setOnClickListener(new View.OnClickListener() {
@@ -75,17 +87,7 @@ public class newfiches extends AppCompatActivity {
             }
        });
 
-/*
-        Intent intent = getIntent();
-        if (intent!=null){
-            String valeurscanner="";
-            if(intent.hasExtra("Valeurducode")){
-                valeurscanner=intent.getStringExtra("Valeurducode");
-            }
-            TextView test = (TextView) findViewById(R.id.testscan);
-            test.setText(valeurscanner);
-        }
-*/
+
     }
 
         public void retouraccueuil1() {
