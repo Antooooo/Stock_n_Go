@@ -8,6 +8,7 @@
     tools:context=".scanner">
 
 
+
     <Button
         android:id="@+id/lancement"
         android:layout_width="165dp"
